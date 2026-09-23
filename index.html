@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <form id="moodForm">
+            <div>
+                <h1>Mood Matcher</h1>
+                <h3><label for="mood">Please tell me how you feel today.</label></h3><br>
+                <select id="mood" name="mood">
+                    <option value="">-- Choose One --</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Calm">Calm</option>
+                    <option value="Happy">Happy</option>
+                </select>
+            </div>
+
+            <div>
+                <h2><label for="note">May I ask why it is you feel this way?</label></h2><br>
+
+                <textarea id="note" name="note"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <section id="result">
+            <h2 id="resultMessage"></h2>
+            <p id="resultNote"></p>
+            <img id="resultImage">
+        </section>
+
+        <button id="resetBtn" type="button">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

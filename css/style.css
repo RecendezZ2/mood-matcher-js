@@ -1,0 +1,172 @@
+
+
+:root {
+  --primary-sunglow: #2bcd7c;
+  --secondary-white: #ffffffeb;
+  --secondary-purple: #300496
+  --secondary-light-blue: #cadbf8;
+  --secondary-rust: #ba5a8a;
+  --secondary-bluetiful: #e83ac2;
+  --secondary-black: #000000;
+  --secondary-vegan:#9d6d20;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* BASIC FORMATTING  this is copied from most of the projects we have done miss hanja was the first one to show me*/
+html {
+  box-sizing: border-box;
+} 
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+body {
+    font-family: "Cabin", sans-serif;;
+    padding: 34px;
+    background: var(--secondary-white);
+    margin: 0;
+}
+
+
+h1 {
+  padding-left: 17rem;
+}
+
+#container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--secondary-white);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--secondary-light-blue);
+}
+
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--primary-sunglow);
+  border-radius: 11px;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* Select every <button> element whose type attribute is exactly "submit". The square brackets are called an attribute selector CSS uses them to select an element based on one of its HTML attributes and its value same as for line 89 but its styling the submit with a hover color called sunglow */
+button[type="submit"] {
+  background-color: var(--secondary-bluetiful);
+  color: var(--secondary-black);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-sunglow);
+}
+
+#resetBtn {
+  margin-top: 15px;
+  background-color: var(--secondary-black);
+  color: white;
+  ;
+}
+
+#resetBtn:hover {
+  background-color: #5a6268;
+}
+
+#result {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+/* Find an element with class "result" inside the element with id="message" */
+#result.message {
+  display: block;
+}
+
+#resultMessage {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+#resultNote {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 22px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+#resultImage {
+  width: 120px;
+  height: 120px;
+  /* controls how an image fits inside the width and height I gave it keeps the images original shape/proportions does not crop and keeps and makes my image fit inside an imaginary box */
+  object-fit: contain;
+}
+/* find an element with class "happy" inside the element with id="container" */
+#container.happy {
+  background: #fff7d6;
+}
+/* Find an element with class "sad" inside the element with id="container" */
+#container.sad {
+  background: #dcecff;
+}
+/* Find an element with class "calm" inside the element with id="container" */
+#container.calm {
+  background: #e6fff3;
+}
+
+@media (max-width: 600px) {
+  #container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  select,
+  textarea,
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #resultMessage {
+    font-size: 18px;
+  }
+
+  #resultImage {
+    width: 100px;
+    height: 100px;
+  }
+}

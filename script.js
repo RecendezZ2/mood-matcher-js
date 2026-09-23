@@ -56,7 +56,7 @@ moodForm.addEventListener("submit", function (event) {
     container.classList.add("happy");
 
   } else if (userMood === "Sad") {
-    outputMessage = "💗Its of that you are feeling sad. It is normal to feel this way sometimes. Todays nothing tomorrow cant fix promise. Dont forget when you focus on the good, the good gets better💕";
+    outputMessage = "💗Its ok that you are feeling sad. It is normal to feel this way sometimes. Todays nothing tomorrow cant fix promise. Dont forget when you focus on the good, the good gets better💕";
     imgAlt = "Sad emoji";
     imgSrc = imageUrls.Sad;
 
